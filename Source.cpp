@@ -54,7 +54,7 @@ public:
 	CatDog(string allname = "Ivanova",string catname = "Barsik", int catage = 1, int trickery = 100, string dogname = "Sharik", int dogage = 1, int loyalty = 100) : Cat(catname, catage, trickery), Dog(dogname, dogage, loyalty), Animal(allname, catage) {}
 };
 void main() {
-	CatDog combined("Ivanovi", "Murzik", 2, 87, "Sharik", 2, 98);
+	CatDog combined("Ivanoviiiii", "Murzik", 2, 87, "Sharik", 2, 98);
 	combined.information();
 	combined.Cat::voice(6);
 	combined.Dog::voice(6);
