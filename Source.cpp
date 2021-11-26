@@ -28,7 +28,7 @@ public:
 			cout << " Meow!";
 		cout << endl;
 	}
-	Cat(string name = "Barsik", int age = 1, int trickery = 100) : catname(name), trickery(trickery) { }
+	Cat(string name = "Barsik", int age = 1, int trickery = 100) : catname(name), trickery(trickery), Animal("Ivanovi", age) { }
 };
 class Dog : virtual public Animal {
 protected:
@@ -41,7 +41,7 @@ public:
 			cout << " Bark!";
 		cout << endl;
 	}
-	Dog(string name = "Sharik", int age = 1, int loyalty = 100) : dogname(name), loyalty(loyalty) { }
+	Dog(string name = "Sharik", int age = 1, int loyalty = 100) : dogname(name), loyalty(loyalty), Animal("Ivanovi",age) { }
 };
 class CatDog : public Cat, public Dog {
 public:
@@ -51,12 +51,16 @@ public:
 		cout << "Allname:" << name << endl;
 		
 	}
-	CatDog(string allname = "Ivanova",string catname = "Barsik", int catage = 1, int trickery = 100, string dogname = "Sharik", int dogage = 1, int loyalty = 100) : Animal(allname, catage), Cat(catname, catage, trickery), Dog(dogname, dogage, loyalty) {}
+	CatDog(string allname = "Ivanova",string catname = "Barsik", int catage = 1, int trickery = 100, string dogname = "Sharik", int dogage = 1, int loyalty = 100) : Cat(catname, catage, trickery), Dog(dogname, dogage, loyalty), Animal(allname, catage) {}
 };
 void main() {
 	CatDog combined("Ivanovi", "Murzik", 2, 87, "Sharik", 2, 98);
 	combined.information();
 	combined.Cat::voice(6);
 	combined.Dog::voice(6);
-
+	Cat stat("Barsik", 2, 0);
+	Dog stat2("Sharik", 5, 0);
+	cout << "\n\n\n\n\n\n";
+	stat.voice(6);
+	stat2.voice(6);
 }
