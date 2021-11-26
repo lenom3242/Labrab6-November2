@@ -60,7 +60,4 @@ void main() {
 	combined.Dog::voice(6);
 	Cat stat("Barsik", 2, 0);
 	Dog stat2("Sharik", 5, 0);
-	cout << "\n\n\n\n\n\n";
-	stat.voice(6);
-	stat2.voice(6);
 }
