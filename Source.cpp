@@ -41,7 +41,7 @@ public:
 			cout << " Bark!";
 		cout << endl;
 	}
-	Dog(string name = "Sharik", int age = 1, int loyalty = 100) : dogname(name), loyalty(loyalty) {}
+	Dog(string name = "Sharik", int age = 1, int loyalty = 100) : dogname(name), loyalty(loyalty) { }
 };
 class CatDog : public Cat, public Dog {
 public:
