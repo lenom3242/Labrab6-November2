@@ -10,12 +10,12 @@ protected:
 public:
 	Animal(string name = "Animal", int age = 1) : name(name), age(age) {}
 
-	void voice(int questionmark) {
-		cout << "My name is " << name;
-		for (int i = 0; i < questionmark; i++)
-			cout << "?";
+	//void voice(int questionmark) {
+	//	cout << "My name is " << name;
+	//	for (int i = 0; i < questionmark; i++)
+	//		cout << "?";
 
-	}
+	//}
 };
 class Cat : virtual public Animal {
 protected:
